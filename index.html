@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>登录页面-homepage</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/vector.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+
+</head>
+<body>
+
+<div id="container">
+	<div id="output">
+		<div class="containerT">
+			<h1>用户登录</h1>
+			<form method="post" action="js/login.js">
+				
+				<p><label class="label_input">用户名</label><input type="text" id="username" class="text_field" value="admin"/></p>
+				<p><label class="label_input">密码</label><input type="password" id="password" class="text_field" value="123456"/></p>
+				
+				<div id="login_control">
+					<input type="button" id="btn_login" value="登录" onclick="login();"/>
+					<a id="forget_pwd" href="forget_pwd.html">忘记密码？</a>
+				</div>
+
+				
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(function(){
+        Victor("container", "output");   //登录背景函数
+        $("#username").focus();
+        $(document).keydown(function(event){
+            if(event.keyCode==13){
+                $("#btn_login").click();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
