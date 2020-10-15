@@ -5,7 +5,7 @@ function signin() {
  
     var username = document.getElementById("username1");
     var pass = document.getElementById("password1");
-	var email = document.getElementById("email");
+    var email = document.getElementById("email");
     var phone = document.getElementById("phone");
 	
 
