@@ -5,12 +5,12 @@ function signin() {
  
     var username = document.getElementById("username1");
     var pass = document.getElementById("password1");
-    var email = document.getElementById("email");
+	var email = document.getElementById("email");
     var phone = document.getElementById("phone");
 	
 
 	 $.ajax({
-		type: "POST",
+		type: "GET",
 		dataType: "json",
 		url: 'http://127.0.0.1:9090',
 		contentType: "application/json",
